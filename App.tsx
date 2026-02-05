@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Try to play audio on mount
+    // paly audio on mountm 
     const playAudio = async () => {
       if (audioRef.current && audioUrl) {
         try {
@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
     playAudio();
 
-    // Add one-time click listener to unlock audio if autoplay failed
+
     const handleInteraction = () => {
       if (audioRef.current && audioRef.current.paused && audioUrl) {
          audioRef.current.play()
