@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will you be my Valentine?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'valentine-red': '#FF3366',
+              'valentine-pink': '#FF8FA3',
+              'valentine-cream': '#FFFBF0',
+              'valentine-dark': '#8B0000',
+            },
+            fontFamily: {
+              cursive: ['"Great Vibes"', 'cursive'],
+              sans: ['"Nunito"', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'fall': 'fall 10s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              fall: {
+                '0%': { transform: 'translateY(-10vh) rotate(0deg)' },
+                '100%': { transform: 'translateY(110vh) rotate(360deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FFFBF0;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FFFBF0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FF8FA3;
+        border-radius: 4px;
+      }
+      
+      /* Explicit Keyframes to ensure animation works */
+      @keyframes fall {
+        0% { transform: translateY(-10vh) rotate(0deg); }
+        100% { transform: translateY(110vh) rotate(360deg); } 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
